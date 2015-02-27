@@ -1,19 +1,20 @@
+<div ng-show="beats.editing">
+
 <div ng-show="beat.reporters.length">
   <h3>Reporter List for {{ beat.name }} </h3>
   <ul>
     <li ng-repeat="item in beat.reporters">
       {{ item.name }}
       <ul>
-        <li> {{ item.yearsOfEmployment }} </li>
+        <li> Birthdate: {{ item.yearsOfEmployment }} </li>
         <li> {{ item.birthdate }} </li>
       </ul>
     </li>
   </ul>
 </div>
 
-<div ng-show="beats.editing">
   <a class="btn btn-danger" ng-click="beats.editing=false">Add Another Beat</a>
-  <h3>Add a reporter to {{ beat.name }} </h3>
+  <h2>Add a reporter to {{ beat.name }} </h2>
   <form ng-submit="addReporter()" class="form-inline" role="form">
     <div class="form-group">
       <input type="text" ng-model="reporterName" class="form-control" placeholder="NAME HERE">
@@ -21,12 +22,12 @@
     <hr>
     <div class="form-group">
       Years of Employment:<br>
-      <input type="text" ng-model="reporterYOE" class="form-control" placeholder="YEARS OF EMPLOYMENT">
+      <input type="text" ng-model="reporterYOE" class="form-control" placeholder="YYYY-YYYY">
     </div>
     <hr>
     <div class="form-group">
       Birthdate:<br>
-      <input type="date" ng-model="reporterBirthdate" class="form-control" placeholder="BIRTHDATE">
+      <input type="text" ng-model="reporterBirthdate" class="form-control" placeholder="MM-DD-YYYY">
     </div>
     <hr>
     <button type="submit" class="btn btn-primary">Add Reporter</button>

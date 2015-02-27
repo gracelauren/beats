@@ -1,3 +1,4 @@
+<div ng-hide="beats.editing">
 <div ng-show="beats.length">
   <h2>The Beats:</h2>
   <ul>
@@ -9,7 +10,6 @@
 
 
 <div class="col-md-4">
-  <div ng-hide="beats.editing">
     <h3>Add a New Beat</h3>
     <form ng-submit="BeatsFactory.addBeat()" class="form-inline" role="form">
       <div class="form-group">
@@ -17,8 +17,9 @@
       </div>
       <button type="submit" class="btn btn-primary">Add Beat</button>
     </form>
-  </div>
 </div>
+</div>
+
 
 
 <div ui-view> </div>
