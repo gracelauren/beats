@@ -12,18 +12,23 @@
 </div>
 
 <div ng-show="beats.editing">
-  <h4>Add a reporter to {{ beat.name }} </h4>
+  <a class="btn btn-danger" ng-click="beats.editing=false">Add Another Beat</a>
+  <h3>Add a reporter to {{ beat.name }} </h3>
   <form ng-submit="addReporter()" class="form-inline" role="form">
     <div class="form-group">
-      <input type="text" ng-model="reporterName" class="form-control" placeholder="NAME">
+      <input type="text" ng-model="reporterName" class="form-control" placeholder="NAME HERE">
     </div>
+    <hr>
     <div class="form-group">
+      Years of Employment:<br>
       <input type="text" ng-model="reporterYOE" class="form-control" placeholder="YEARS OF EMPLOYMENT">
     </div>
+    <hr>
     <div class="form-group">
-      <input type="text" ng-model="reporterBirthdate" class="form-control" placeholder="BIRTHDATE">
+      Birthdate:<br>
+      <input type="date" ng-model="reporterBirthdate" class="form-control" placeholder="BIRTHDATE">
     </div>
-    <button type="submit" class="btn btn-default btn-sm">Add Reporter</button>
+    <hr>
+    <button type="submit" class="btn btn-primary">Add Reporter</button>
   </form>
-  <a class="btn btn-danger" ng-click="beats.editing=false">Add Another Beat</a>
 </div>

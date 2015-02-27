@@ -1,6 +1,6 @@
 html{
   height: 100%;
-  background: url(../imgs/beet.jpg) no-repeat center center fixed;
+  background: url(../imgs/beet.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -18,13 +18,17 @@ h1{
   font-size: 7em;
 }
 
-/*h2, h3, h4, p{
-  color: #d9230f;
-}*/
+h2, h3, h4, p{
+  color: maroon;
+}
 
 .form-inline .form-control {
   width: 300px !important;
   margin-bottom: 20px;
+}
+
+hr{
+  border-top: 0px transparent;
 }
 
 
@@ -49,6 +53,7 @@ input[type=number],
   box-shadow: inset 0 -1px 0 #dddddd;
   font-size: 16px;
   background: transparent;
+  color: maroon;
 }
 textarea:focus,
 textarea.form-control:focus,
@@ -106,6 +111,7 @@ input[type=number].input-sm,
 [type=tel].form-control.input-sm,
 [contenteditable].form-control.input-sm {
   font-size: 12px;
+  color: white;
 }
 textarea.input-lg,
 textarea.form-control.input-lg,
@@ -123,18 +129,18 @@ input[type=number].input-lg,
 }
 
 
-::-webkit-input-placeholder {
-  color: #d9230f;
+.form-control::-webkit-input-placeholder {
+  color: maroon;
 }
 
-:-moz-placeholder { /* Firefox 18- */
-  color: #d9230f;
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: maroon;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-  color: #d9230f;
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+  color: maroon;
 }
 
-:-ms-input-placeholder {
-  color: #d9230f;
+.form-control:-ms-input-placeholder {
+  color: maroon;
 }
