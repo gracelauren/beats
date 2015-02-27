@@ -19,4 +19,10 @@ beatsVine.config(function($stateProvider) {
     controller: 'ReportersCtrl'
   });
 
+  $stateProvider.state('beats.reporters', {
+    url: "/:beatsId",
+    templateUrl: "partials/beats.reporters.html"
+    controller: 'ReportersCtrl'
+  });
+
 });
