@@ -12,11 +12,28 @@
   <script src="controllers/BeatsController.js"></script>
   <script src="controllers/ReportersController.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/simplex/bootstrap.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="container">
-    <div ui-view></div>
+  <!-- Begin stage wrapper -->
+  <div style="position: relative;">
+
+    <!-- Background wrapper: -->
+    <div id="bwrapper" style="position: absolute; z-index: 1; left: 0; top: 0;">
+      <!-- All background content goes here... -->
+    </div>
+
+    <!-- Content wrapper; all original content goes inside of this div: -->
+    <div style="position: relative; z-index: 2;">
+      <!-- Begin content block -->
+      <div class="container">
+        <div ui-view></div>
+      </div>
+      <!-- End content block -->
+    </div>
+
   </div>
+  <!-- End stage wrapper -->
 </body>
 </html>
