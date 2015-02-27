@@ -21,7 +21,7 @@ beatsVine.config(function($stateProvider) {
 
   $stateProvider.state('beats.reporters', {
     url: "/:beatsId",
-    templateUrl: "partials/beats.reporters.html"
+    templateUrl: "partials/beats.reporters.html",
     controller: 'ReportersCtrl'
   });
 

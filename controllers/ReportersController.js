@@ -1,7 +1,7 @@
 beatsVine.controller('ReportersCtrl', function ReportersCtrl($scope, $stateParams, $state, BeatsFactory, UtilitiesFactory) {
-  $scope.course = UtilitiesFactory.findById(CoursesFactory.courses, $stateParams.courseId)
+  $scope.beat = UtilitiesFactory.findById(BeatsFactory.courses, $stateParams.beatId)
   $scope.addReporter = function() {
-    $scope.course.reporters.push({ name: $scope.reporterName });
+    $scope.beat.reporters.push({ name: $scope.reporterName, yearsOfEmployment: $scope.reporterYOE, birthdate: $scope.reporterBirthdate });
     $scope.reporterName = null;
   }
 });
