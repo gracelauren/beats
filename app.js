@@ -7,20 +7,14 @@ beatsVine.config(function($stateProvider) {
     templateUrl: "partials/home.html"
   });
 
-  $stateProvider.state('Beats', {
-    url: "/Beats",
-    templateUrl: "partials/Beats.html",
+  $stateProvider.state('beats', {
+    url: "/beats",
+    templateUrl: "partials/beats.html",
     controller: 'BeatsCtrl'
   });
 
-  $stateProvider.state('Reporters', {
-    url: "/Reporters",
-    templateUrl: "partials/Reporters.html",
-    controller: 'ReportersCtrl'
-  });
-
   $stateProvider.state('beats.reporters', {
-    url: "/:beatsId",
+    url: "/:beatId",
     templateUrl: "partials/beats.reporters.html",
     controller: 'ReportersCtrl'
   });

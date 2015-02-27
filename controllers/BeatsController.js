@@ -1,4 +1,4 @@
-beatsVine.controller('BeatsCtrl', function BeatsCtrl($scope, $state, BeatsFactory) {
-  $scope.beats = BeatsFactory.beats;
+beatsVine.controller('BeatsCtrl', function BeatsCtrl($scope, BeatsFactory) {
   $scope.BeatsFactory = BeatsFactory;
+  $scope.beats = BeatsFactory.beats;
 });
