@@ -7,16 +7,6 @@ beatsVine.config(function($stateProvider) {
     templateUrl: "partials/home.html"
   });
 
-  $stateProvider.state('BeatsTreats', {
-    url: "/BeatsTreats",
-    templateUrl: "partials/BeatsTreats.html",
-    controller: 'BeatsTreatsCtrl'
-  });
 
-  $stateProvider.state('Style', {
-    url: "/Style",
-    templateUrl: "partials/Style.html",
-    controller: 'StyleCtrl'
-  });
 
 });
