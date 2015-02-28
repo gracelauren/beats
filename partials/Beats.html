@@ -1,11 +1,22 @@
 <div ng-hide="beats.editing">
-<div ng-show="beats.length">
-  <h2>The Beats:</h2>
-  <ul>
-    <li ng-repeat="item in beats">
-      <a ng-click="beats.editing=true" ui-sref="beats.reporters({ beatId: item.id })">{{ item.name }}</a>
-    </li>
-  </ul>
+<div class="row" ng-show="beats.length">
+  <div class="col-md-4">
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <input ng-model="query" type="text" class="form-control" placeholder="Search the Beats">
+      </div>
+    </form>
+  </div>
+  <div class="col-md-4">
+
+    <h2 ng-show="beats.length && filtered.length">The Beats:</h2>
+    <h2 ng-show="beats.length && !filtered.length">No Matches</h2>
+    <ul>
+      <li ng-repeat="item in filtered = (beats | filter:query)">
+        <a ng-click="beats.editing=true" ui-sref="beats.reporters({ beatId: item.id })">{{ item.name }}</a>
+      </li>
+    </ul>
+  </div>
 </div>
 
 
