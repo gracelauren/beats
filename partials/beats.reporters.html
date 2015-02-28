@@ -1,19 +1,21 @@
-<div ng-show="beats.editing">
 
+<div ng-show="beats.editing">
 <div ng-show="beat.reporters.length">
   <h3>Reporter List for {{ beat.name }} </h3>
   <ul>
     <li ng-repeat="item in beat.reporters">
-      {{ item.name }}
+      <a ng-click="details=!details">Name: {{ item.name }}</a>
+      <span ng-hide="details">
       <ul>
         <li> Birthdate: {{ item.yearsOfEmployment }} </li>
-        <li> {{ item.birthdate }} </li>
+        <li> Years of Employment: {{ item.birthdate }} </li>
       </ul>
+      </span>
+      <span ng-show="details"></span>
     </li>
   </ul>
 </div>
 
-  <a class="btn btn-danger" ng-click="beats.editing=false">Add Another Beat</a>
   <h2>Add a reporter to {{ beat.name }} </h2>
   <form ng-submit="addReporter()" class="form-inline" role="form">
     <div class="form-group">
@@ -30,6 +32,10 @@
       <input type="text" ng-model="reporterBirthdate" class="form-control" placeholder="MM-DD-YYYY">
     </div>
     <hr>
+    <div class="row">
     <button type="submit" class="btn btn-primary">Add Reporter</button>
   </form>
+  <a class="btn btn-danger" ng-click="beats.editing=false">Add Another Beat</a>
+    </div>
+
 </div>

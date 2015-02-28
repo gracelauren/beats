@@ -7,4 +7,6 @@ beatsVine.controller('ReportersCtrl', function ReportersCtrl($scope, $stateParam
     $scope.reporterYOE = null;
     $scope.reporterBirthdate = null;
   };
+  $scope.details = true;
+
 });
